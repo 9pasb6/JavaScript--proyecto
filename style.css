@@ -28,13 +28,7 @@
     justify-content: space-around;
   }
   
-header#uq{
-    grid-area: uq;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rebeccapurple;
- }
+
   
   section {
     grid-area: section;
@@ -45,20 +39,56 @@ header#uq{
     
   }
 
-  #grilla {
-
-    /* column-gap: 20px;
-    row-gap: 20px; */
-    /* generar espacios entre columnas y filas */
+  /* nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
   
+
+  
+  aside {
+    grid-area: aside;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+  }
+
+  footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+  } */
+
+  #grilla {
+
+    column-gap: 20px;
+    row-gap: 20px; 
+    
+    /* generar espacios entre columnas y filas*/
+  }
+  
+
+  /* #grilla {
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-rows: 20% 20% 50% 10%;
+    grid-template-areas: "header header" "nav nav" "aside section" "footer footer";
+  } */
 
   #grilla {
     display: grid;
     grid-template-columns: 20% auto;
     grid-template-rows: 20% 80%;
-    grid-template-areas: "uq header" "section section";
+    grid-template-areas: "header header"  "section section" ;
   }
+  
   
 
   /* estilossssssssssss */
@@ -87,11 +117,7 @@ header#uq{
 
 
 
-#shrek{
-    height: 200px;
-    width: 200px;
-    margin: 10px;
-}
+
 
 #logoUq{
     height: 100px;
@@ -103,11 +129,7 @@ header#uq{
 
 
 
-.chupon {
-    
-    text-align: center;
-    
-}
+
 
 #divSection{
     background: linear-gradient(to bottom, #2d8911 80%, #78ec54);
@@ -116,7 +138,35 @@ header#uq{
     padding: 10px;
     
 }
-/* 
+
 .border{
-    border: 1px solid black;
-} */
+    border: 3px solid black;
+}
+
+.card{
+  background-color: aqua;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+}
+
+.ulNom{
+  background-color: #891111;
+  padding: 20px;
+  border-radius: 15px;
+  margin: 30px;
+  text-align: center;
+   
+}
+
+.img{
+  height: 50px;
+  width: 50px;
+}
+
+#contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
