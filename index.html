@@ -1,85 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!-- CSS Bootsrap -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-    <!-- JS Boostrap -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guadualito café</title>
+  <!-- icono -->
+  <link rel="shortcut icon" href="img/logoGuca.png" type="image/x-icon">
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilo/style.css">
 
-
-    <title>Guadualito café</title>
 </head>
+
 <body>
-<div id="grilla">
+  <!-- nav -->
+  <nav class="navbar sticky-top navbar-dark navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img class="storelogo" src="img/logoGuca.png" alt="Logo" width="37" height="24"
+          class="d-inline-block align-text-top">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
 
-
-    <header  class="border">
-        <!-- <div class="container-fluid bg-info d-flex justify-content-center">
-            <h1 class="text-light mb-0 p-4 fs-30">Bienvenidos</h1>
-        </div> -->
-
-
-
-    
-    </header>
-
-   
-
-<!-- <nav class="bg-dark">
-    
-</nav>
-     -->
-
-  
-         
-    <section class="border">
-
-
-
-<div id="contenedor1">
-
-    
-
-</div>
-
-
-<div id="contenedor">
-      
-    
-   
-   
-  
-
-</div>
-
-<button id="borrame">Borrame</button>
-
-        
-      
-
-        <!-- <div id="divSection">
-
-            
+          <li class="nav-item">
+            <a class="nav-link active" href="catalogo/catalogo.html">Catalogo</a>
+          </li>
           
-
-            <h2 class="chupon">Trabajo realizado por: </h2>
-            
-            <ul id="ulNom">
-                <li class="nombres">Pablo Andrés Sánchez Bernal</li>
-            </ul>
-
-        </div> -->
-
-        
-       
-    </section>
-           
-</div>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Buscar producto" aria-label="Search">
+          <button class="btn btn-outline-secondary" type="submit" style="color: white;">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
   
+  <header>
+    <!-- Carrusel de ofertas -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="destacado" src="img/cafeteria.jpg" class="d-block w-100" alt="Shaman king">
+          <div class="carousel-caption d-none d-sm-block">
+            <h5>Café Americano con 15% de descuento!</h5>
+            <p>Disponible hasta el 28 de Noviembre</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="destacado" src="img/mesa.jpg" class="d-block w-100" alt="Vinland saga">
+          <div class="carousel-caption d-none d-sm-block">
+            <h5>Comparte los mejores momentos en Guadualito Café</h5>
+            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="destacado" src="img/personas.jpg" class="d-block w-100" alt="Shummatsu">
+          <div class="carousel-caption d-none d-sm-block">
+            
+            <h5>Disfruta de tus estudios con una buena taza de café</h5>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+   
+  </header>
 
-<script src="script.js"></script>
+
+
+  <!-- Main -->
+  <main>
+    <h1 class="display-5">Guadualito Café</h1>
+    <div class=" intro row contentcenter">
+      <div class="intro-text">
+        <h3 class="display-6" data-aos="fade-right">¿Deseas tomar un buen café?</h3>
+        <p class="lead" data-aos="fade-right">
+          Este es el resultado del trabajo de más
+          de 540.000 familias caficultoras colombianas
+          que han cautivado al mundo con el café de la
+          mejor calidad.
+         
+        </p>
+      </div>
+    </div>
+
+   
+
+    
+
+
+
+  </main>
+
+  <footer class="container-fluid">
+    <div class="footer row">
+      <div class="col-12 col-md-6">
+        <h3>CONTACTO</h3>
+        <p>- teléfono: +57 320 2889392</p>
+        <p>- Correo: guadualito@gmail.com</p>
+        <p>- Horario de atención: Lunes a viernes, desde las 9:00 am hasta las 10 pm.</p>
+        <p>- Ubicación: Medellin - Colombia.</p>
+      </div>
+      <div class="col-12 col-md-6">
+        <h3 class="rrss">Siguenos en: </h3>
+        <ul class="rrss">
+          <li><a href="https://www.Instagram.com"><img class="logo" src="img/ig-logo.png" alt="Instagram"></a></li>
+          <li><a href="https://facebook.com"><img class="logo" src="img/fb-logo.png" alt="Facebook"></a></li>
+          <li><a href="https://whatsapp.com"><img class="logo" src="img/wsp-logo.png" alt="Whatsapp"></a></li>
+        </ul>
+      </div>
+    </div>
+   
+  </footer>
+
+  <!--Script de la primera entrega hehehe  -->
+  <!-- <script src="script.js"></script> -->
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <!-- aos script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
+
+

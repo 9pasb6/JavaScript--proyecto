@@ -1,0 +1,425 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Anek Latin', sans-serif;
+}
+
+
+@import "fondos";
+
+// mixin de alineado
+@mixin centers ($justify, $aling) {
+    justify-content: $justify;
+    text-align: $aling;
+    margin: auto;
+}
+
+// // @include centers (center, center)
+
+
+/* general */
+.storelogo {
+    width: 80px;
+    height: auto;
+}
+
+h1 {
+    background-color: #fd7f02e1;
+    text-transform: uppercase;
+    color: white;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    text-align: center;
+    padding: 5px;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+}
+
+h2 {
+    @extend h1;
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.intro-text {
+    background-color: rgba(0, 0, 0, 0.767);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    padding-top: 30px;
+
+    a h3 {
+        text-transform: uppercase;
+        display: inline-block;
+        padding-bottom: 35px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+            text-decoration: underline;
+        }
+    }
+}
+
+h5 {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.overtexto {
+    color: white;
+    text-align: center;
+    margin: auto;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, 1px -1px black, -1px 1px black;
+    display: inline;
+}
+
+.producto {
+    margin: 10px;
+    padding: 10px;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+        z-index: 100;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    &:hover img {
+        filter: saturate(1.8);
+    }
+
+    &:hover .btn {
+        background-color: #673036;
+        border: 1px black solid;
+    }
+
+    &.card {
+        padding: 7px;
+        margin: 5px;
+    }
+}
+
+.genero {
+    margin: auto;
+    justify-content: center;
+    padding: 0;
+    margin: 5px;
+    border: 1px black solid;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        z-index: 100;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        filter: grayscale(0.7);
+    }
+}
+
+.genecatalog {
+    margin: auto;
+
+    padding: 25px 0px 25px 0px;
+    justify-content: center;
+}
+
+.catalogo {
+    padding: 30px 60px 40px 60px;
+    @include centers (center, center);
+}
+
+
+.botfooter {
+    color: white;
+    border: 2px #fd7f02 solid;
+    background-color: #673036;
+    margin-top: 20px;
+    padding: 5px;
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        z-index: 100;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        filter: grayscale(0.7);
+    }
+}
+
+
+
+article {
+        margin: 30px;
+        text-align: start;
+        background-color: rgba(0, 0, 0, 0.555);
+        color: white;
+        border: 1px black solid;
+        height: fit-content;
+        padding: 55px;;
+
+}
+
+
+.formulario {
+    margin-bottom: 100px;
+    border: 2px solid black;
+    padding: 80px ;
+    background-color: rgba(255, 255, 255, 0.637);
+    border-radius: 15px;
+
+    button {
+        transition: all .1s ease-in-out;
+        margin: 10px 20px 10px 20px;
+
+        &.send:hover {
+            background-color: white;
+            color: #FD7F02;
+            border: #FD7F02 solid 1px;
+            font-weight: bold;
+            transform: scale(1.1)
+        }
+
+        &.clear {
+            background-color: #673036;
+
+            &:hover {
+                background-color: black;
+                border: 1px black solid;
+                transform: scale(1.1)
+            }
+        }
+
+    }
+}
+
+.hover {
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1)
+    }
+}
+
+
+
+.formularioInterno {
+    width: 80%;
+    border: 5px black solid;
+    margin: auto;
+    text-align: left;
+    padding: 20px;
+
+    label {
+        display: block;
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    input {
+        width: 100%;
+        height: 2.5rem;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 10px;
+        transition: all .1s ease-in-out;
+
+        &:focus {
+            transform: scale(1.025);
+            z-index: 100;
+            box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.24), 0 5px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    }
+}
+
+.wsp {
+    bottom: 30px;
+    justify-content: end;
+    right: 30px;
+    left: auto;
+    width: 100px;
+    transition: all .1s ease-in-out;
+
+    img {
+        justify-content: end;
+        width: 100px;
+        transition: all .1s ease-in-out;
+
+        &:hover {
+            transform: scale(1.25);
+        }
+    }
+}
+
+.desres {
+    margin: 0;
+}
+
+.logo {
+    width: 50px;
+    filter: invert(1);
+}
+
+.rrss {
+    list-style: none;
+    margin: auto;
+    @include centers (center, center);
+
+    li {
+        display: inline-block;
+        padding: 10px;
+    }
+}
+
+/* destacados */
+img.destacado {
+    max-width: 100vw;
+}
+
+.video {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.faq {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    text-align: left;
+
+}
+
+
+
+
+/* Modificaciones al BS */
+
+.navbar {
+    background-color: black;
+    color: black
+}
+
+.nav-link {
+    color: #673036;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.767);
+    width: fit-content;
+    margin: auto;
+    padding: 20px 50px 10px 50px;
+    text-transform: uppercase;
+}
+
+.card {
+    padding: 0px;
+    margin: 0;
+    margin-top: 15px;
+}
+
+.btn {
+    background-color: green;
+    border: 1px solid black;
+
+    &:focus {
+        background-color: #e32f44;
+        box-shadow: none;
+        border: 1px black solid;
+    }
+
+    &:hover {
+        background-color: #e32f44;
+        border: 1px solid black;
+    }
+    &.btn-secondary:hover{
+        background-color: gray;
+        border: black 1px solid;
+    }
+}
+
+.contentcenter {
+    justify-content: center;
+    margin: auto;
+}
+
+.margdesct {
+    margin: 40px 0 40px 0;
+}
+
+.page-item {
+    margin-top: 40px;
+
+    a {
+        color: #FD7F02;
+    }
+}
+
+.accordion {
+    margin: auto;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.accordion-item {
+    margin: 0 80px 0 80px;
+}
+
+.accordion-button {
+    &:focus {
+        box-shadow: none;
+    }
+
+    &:not(.collapsed) {
+        background-color: #fd7f02d5;
+        color: black;
+        font-weight: bold;
+    }
+}
+
+// map
+$colors: (
+    instagram: #5851DB,
+    facebook: #4267B2,
+    whatsapp: #25D366,
+);
+
+@each $red,
+$color in $colors {
+    .red--#{$red} {
+        background-color: $color;
+        padding: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 2rem;
+        margin: 30px;
+
+        a {
+            color: white;
+        }
+    }
+}
+
+// mixin de alineado
+@mixin centers ($justify, $aling) {
+    justify-content: $justify;
+    text-align: $aling;
+    margin: auto;
+}
+
+// // @include centers (center, center)
+
+// .carrito {
+    
+// }
